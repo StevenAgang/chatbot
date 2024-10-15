@@ -312,4 +312,8 @@ switch (ENVIRONMENT)
  *
  * And away we go...
  */
+// Uncomment the code below during local development
+// require_once BASEPATH . 'dotenv/autoloader.php';
+// $dotenv = new Dotenv\Dotenv(__DIR__);
+// $dotenv->load();W
 require_once BASEPATH.'core/CodeIgniter.php';
