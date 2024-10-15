@@ -41,7 +41,7 @@ class Mains extends CI_Controller {
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $message);
 		curl_setopt($ch,CURLOPT_HTTPHEADER,$header);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-		curl_setopt($ch, CURLOPT_CAINFO,'C://Users/StevenAgang/Downloads/cacert.pem');
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,TRUE);
 		$response = curl_exec($ch);
 		$error = '';
 		$data = json_decode($response,true);
