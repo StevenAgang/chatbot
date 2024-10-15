@@ -1,8 +1,8 @@
 # Use the official PHP image with Apache
-FROM php:7.4.33-php
+FROM php:7.4.33-apache
 
 #Install necessary php extension
-RUN docker-php-ext-install mysqli pdo pdo_mysql
+RUN docker-php-ext-install
 #Setting working directory
 WORKDIR /var/www/html
 
