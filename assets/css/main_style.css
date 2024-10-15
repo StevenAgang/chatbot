@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: #2E2C2F;
+}
+main{
+    max-width: 70rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+    main #container{
+        max-width: 70rem;
+        height: 90vh;
+        margin: 0 auto;
+        padding: 50px;
+        overflow: auto;
+    }
+    main #container::-webkit-scrollbar{
+        width: 10px;
+    }
+    main #container::-webkit-scrollbar-track{
+        background-color: gray;
+        border-radius: 10px;
+    }
+    main #container::-webkit-scrollbar-thumb{
+        background-color: #8DA9C4;
+        border-radius: 10px;
+    }
+        #container .sender,.receiver{
+            color: white;
+            display: flex;
+            margin-block-end: 10px;
+            text-align: center;
+            padding: 1rem;
+            outline: 1;
+        }
+        #container .sender{
+            justify-content: flex-end;
+        }
+        #container .sender figure,.receiver figure{
+            width: 3rem;
+            overflow: hidden;
+        }
+        #container .sender figure img,.receiver figure img{
+            max-width: 100%;
+            width: 100%;
+            height: 3rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        #container p{
+            margin-inline: 1rem;
+            background-color: blue;
+            padding: 1rem;
+            word-wrap: break-word;
+            text-align: left;
+            border-radius: 1rem;
+            max-width: 75%;
+            font-size: 1.5vh;
+        } 
+        #container .receiver figure{
+            order: 1;
+        }
+        #container .receiver p{
+            order: 2;
+        }
+main #send_message{
+    max-width: 60rem;
+    margin: 0 auto;
+}
+    #send_message form{
+        display: flex;
+    }
+    #send_message form input[type=text]{
+        width: 90%;
+        margin-inline: 5px;
+        border: none;
+        border-radius: 2px;
+        font-size: 2vh;
+        padding-block: 0.3rem;
+    }
+    #send_message form input[type=text]:focus{
+        outline: 1px solid blue;
+    }
+    #send_message form input[type=image]{
+        width: 3rem;
+        height: auto;
+        padding-block: 0.3rem;
+    }
+#loading{
+    width: 3rem;
+    order: 3;
+    margin-inline: 1rem;
+}
