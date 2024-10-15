@@ -2,7 +2,7 @@
 FROM php:7.4.33-php
 
 #Install necessary php extension
-RUN docker-ext-php-install
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 #Setting working directory
 WORKDIR /var/www/html
 
